@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Chat FullStack Javascript</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+    <nav class="navbar navbar-light bg-danger">
+        <a href="/" class="navbar-brand mx-auto">JavaScript FullStack Chat</a>
+    </nav>
+
+    <div class="card col-md-4 mt-5 mx-auto" id="nickWrap">
+        <div class="card-header">
+            <h3></h3>Enter yor username:</h3>
+        </div>
+        <p id="nickError"></p>
+        <div class="card-body">
+            <form id="nickForm">
+                <input type="text" id="nickname" class="form-control">
+                <button type="submit" class="btn btn-danger btn-block mt-2">
+                    <i class="far fa-paper-plane"></i> Send
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <div class="container" id="contentWrap">
+        <div class="row mt-4">
+            <div class="col-md-6 offset-md-1 mx-auto">
+                <div class="card">
+                    <div class="card-header">
+                        <g4>let's chat...</g4>
+                    </div>
+                    <div id="chat" class="card-body"></div>
+                    <form id="message-form" class="card-footer">
+                        <div class="input-group">
+                            <input type="text" id="message" class="form-control">
+                            <div class="input-group-append">
+                                <button type="submit" class="btn btn-danger">
+                                    <i class="far fa-paper-plane"></i> Send
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <div class="card-header">
+                        <h3>Users</h3>
+                    </div>
+                    <div class="card-body">
+                        <div id="usernames">
+                
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/js/main.js"></script>
+</body>
+</html>
