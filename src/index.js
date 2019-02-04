@@ -16,7 +16,6 @@ const io = socketio.listen(server);
 require('./sockets')(io);
 
 // mongodb connection
-console.log(process.env.MONGODB_URI)
 mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/fazt-socketio', { useNewUrlParser: true })
     .then(db => console.log(`DB connected`))
     .catch( err => console.log(`Error: ${err}`))
